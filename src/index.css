@@ -1,0 +1,243 @@
+@import "tailwindcss";
+@import "@fontsource/fraunces/latin-400.css";
+@import "@fontsource/fraunces/latin-ext-400.css";
+@import "@fontsource/fraunces/latin-400-italic.css";
+@import "@fontsource/fraunces/latin-ext-400-italic.css";
+@import "@fontsource/fraunces/latin-500.css";
+@import "@fontsource/fraunces/latin-ext-500.css";
+@import "@fontsource/fraunces/latin-500-italic.css";
+@import "@fontsource/fraunces/latin-ext-500-italic.css";
+@import "@fontsource/great-vibes/latin-400.css";
+@import "@fontsource/great-vibes/latin-ext-400.css";
+@import "@fontsource/nunito/latin-400.css";
+@import "@fontsource/nunito/latin-ext-400.css";
+@import "@fontsource/nunito/latin-600.css";
+@import "@fontsource/nunito/latin-ext-600.css";
+
+@theme {
+  --font-serif: Fraunces, Palatino, Georgia, serif;
+  --font-script: "Great Vibes", cursive;
+  --font-sans: Nunito, "Segoe UI", sans-serif;
+  --color-night: #2a1840;
+  --color-dusk: #4a2a58;
+  --color-plum: #5a2744;
+  --color-cream: #fff6ef;
+  --color-blush: #f7c9d6;
+  --color-rose: #e8a0b8;
+  --color-cherry: #c4456a;
+  --color-lavender: #d4c2ef;
+  --color-gold: #f3d09a;
+  --color-ivory: #fff8f3;
+}
+
+html {
+  background: #2a1840;
+  color-scheme: dark;
+  overflow-x: clip;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background: #2a1840;
+  color: #fff8f3;
+  font-family: Fraunces, Palatino, Georgia, serif;
+  font-weight: 400;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+button:not(:disabled),
+[role="button"]:not([aria-disabled="true"]),
+a[href],
+summary,
+label[for] {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+::selection {
+  background: rgba(232, 160, 184, 0.45);
+  color: #4a2034;
+}
+
+.sky-glow,
+.star,
+.petal,
+.spark,
+.glow-button,
+.star-pulse {
+  animation-duration: var(--dur, 14s);
+  animation-delay: var(--delay, 0s);
+}
+
+.sky-glow {
+  animation-name: glow-shift;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.star {
+  opacity: var(--star-opacity);
+  animation-name: star-breathe;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.petal {
+  animation-name: petal-fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.spark {
+  animation-name: sparkle;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.glow-button {
+  animation-name: button-glow;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 2.8s;
+}
+
+.star-pulse {
+  animation-name: star-pulse;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 1.8s;
+}
+
+.shake {
+  animation: gentle-shake 0.4s ease;
+}
+
+@keyframes glow-shift {
+  0%,
+  100% {
+    opacity: 0.75;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.06);
+  }
+}
+
+@keyframes star-breathe {
+  0%,
+  100% {
+    opacity: var(--star-opacity);
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    opacity: calc(var(--star-opacity) * 0.35);
+    transform: translate3d(0, -6px, 0) scale(0.8);
+  }
+}
+
+@keyframes petal-fall {
+  0% {
+    transform: translate3d(0, -12vh, 0) rotate(0deg);
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate3d(var(--drift, 24px), 108vh, 0) rotate(320deg);
+    opacity: 0.15;
+  }
+}
+
+@keyframes sparkle {
+  0%,
+  100% {
+    opacity: 0.15;
+    transform: scale(0.6);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1);
+  }
+}
+
+@keyframes button-glow {
+  0%,
+  100% {
+    box-shadow: 0 8px 28px rgba(196, 69, 106, 0.28);
+  }
+  50% {
+    box-shadow: 0 10px 36px rgba(243, 208, 154, 0.55);
+  }
+}
+
+@keyframes star-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 0 rgba(243, 208, 154, 0));
+  }
+  50% {
+    transform: scale(1.12);
+    filter: drop-shadow(0 0 8px rgba(243, 208, 154, 0.85));
+  }
+}
+
+@keyframes gentle-shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(-4px);
+  }
+  70% {
+    transform: translateX(4px);
+  }
+}
+
+.heart {
+  animation-name: heart-rise;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: var(--dur, 11s);
+  animation-delay: var(--delay, 0s);
+}
+
+@keyframes heart-rise {
+  0% {
+    transform: translate3d(0, 18vh, 0) rotate(-10deg) scale(0.85);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate3d(var(--drift, 20px), -115vh, 0) rotate(16deg) scale(1.05);
+    opacity: 0.15;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sky-glow,
+  .star,
+  .petal,
+  .spark,
+  .glow-button,
+  .star-pulse,
+  .shake,
+  .heart {
+    animation: none;
+  }
+
+  .petal,
+  .heart {
+    opacity: 0.45;
+  }
+}
