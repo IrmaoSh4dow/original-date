@@ -60,27 +60,39 @@ export const story = {
   exhibits: [
     {
       id: "manana",
-      title: "La mañana sin prisa",
+      title: "Me gustas, ¿te gusto?",
       caption: "Dos tazas, la ventana abierta, y un día que no nos exige nada.",
       image: "/futuro/foto1.png",
     },
     {
       id: "camino",
-      title: "La carretera",
-      caption: "Un viaje sin hora de vuelta. El mar a un lado y tu mano cerca.",
+      title: "Una vez alguien dijo... tres hijos y casa propia.",
+      caption: "Una casa llena de risas, tres pequeños corriendo por ahí y nosotros dos construyendo la vida que alguna vez imaginamos.",
       image: "/futuro/foto2.png",
     },
     {
       id: "casa",
-      title: "La casa",
-      caption: "Todavía no tiene dirección. Ya tiene una luz encendida para los dos.",
+      title: "Que no falte el amor por el Barcelona.",
+      caption: "Una casa para los dos, una camiseta del Barça para cada uno y mil partidos que celebrar juntos, aunque nos toque sufrir.",
       image: "/futuro/foto3.png",
     },
     {
       id: "sofa",
-      title: "La noche del sofá",
-      caption: "Una manta de más, una película vieja, y ninguna razón para irnos.",
+      title: "Estas con un dramatico, claro que voy a necesitar mimos.",
+      caption: "Una manta, una película y tú abrazándome mientras me hago el dramático. Aunque, siendo sincero, contigo los mimos nunca faltan.",
       image: "/futuro/foto4.png",
+    },
+    {
+      id: "doish",
+      title: "Las flipantes aventuras de Valentina y Luke",
+      caption: "Contigo hasta el plan más tonto termina siendo una aventura que quiero repetir mil veces.",
+      image: "/futuro/foto5.png",
+    },
+    {
+      id: "anime",
+      title: "Tu, yo, ¿y una noche de anime?",
+      caption: "Elegimos el anime, preparamos algo para picar y nos acomodamos juntos. Eso sí, como te quedes dormida antes del final, te haré un resumen a mi manera.",
+      image: "/futuro/foto6.png",
     },
   ],
 } satisfies StoryContent;
